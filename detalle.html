@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del Hotel | Hoteles de la Mixteca</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- BOTÓN REGRESAR -->
+    <!-- ========================= -->
+
+    <button class="btn-volver-flotante" onclick="window.history.back()">
+        ← Regresar
+    </button>
+
+    <!-- ========================= -->
+    <!-- IMAGEN PRINCIPAL -->
+    <!-- ========================= -->
+
+    <header class="hotel-hero">
+
+        <img id="detalle-img-principal"
+             src=""
+             alt="Hotel">
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- INFORMACIÓN PRINCIPAL -->
+    <!-- ========================= -->
+
+    <section class="detalle-header-info">
+
+        <h1 id="detalle-titulo">
+            Cargando...
+        </h1>
+
+        <div id="detalle-estrellas"
+             class="rating-box">
+        </div>
+
+        <div class="info-rapida">
+
+            <div class="precio">
+
+                💰
+                <span id="detalle-precio"></span>
+
+            </div>
+
+            <div class="ubicacion">
+
+                📍
+                <span id="detalle-ubicacion-txt"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CONTENIDO -->
+    <!-- ========================= -->
+
+    <main class="hotel-contenido">
+
+        <section class="col-info">
+
+            <h2>
+
+                Descripción
+
+            </h2>
+
+            <p id="detalle-descripcion"></p>
+
+            <div class="info-adicional">
+
+                <h3>
+
+                    Información adicional
+
+                </h3>
+
+                <p id="detalle-info-extra"></p>
+
+            </div>
+
+        </section>
+
+        <aside class="col-servicios">
+
+            <h2>
+
+                Servicios
+
+            </h2>
+
+            <div id="detalle-servicios-lista"
+                 class="grid-servicios">
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- CONTACTO -->
+    <!-- ========================= -->
+
+    <section class="contacto-card">
+
+        <h2>
+
+            Reserva directamente
+
+        </h2>
+
+        <p>
+
+            Ponte en contacto con el hotel para consultar
+            disponibilidad, tarifas y realizar tu reservación.
+
+        </p>
+
+        <a id="btn-whatsapp-reserva"
+           class="btn-whatsapp"
+           href="#">
+
+            Contactar por WhatsApp
+
+        </a>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- PIE -->
+    <!-- ========================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            Hoteles de la Mixteca
+
+        </p>
+
+        <p>
+
+            Promoviendo el turismo y la hospitalidad
+            en la región Mixteca.
+
+        </p>
+
+    </footer>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>

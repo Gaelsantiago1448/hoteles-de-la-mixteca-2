@@ -1,0 +1,1565 @@
+/* ==========================================================
+   HOTELES DE LA MIXTECA
+   MAIN.CSS - PARTE 1/4
+   Base + Hero + Sección Principal
+========================================================== */
+
+/* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* =========================
+   VARIABLES
+========================= */
+:root{
+
+    --bg:#111827;
+    --bg2:#1F2937;
+
+    --card:#222B38;
+
+    --gold:#D4AF37;
+    --gold2:#F3D36B;
+
+    --white:#FFFFFF;
+    --text:#E5E7EB;
+    --gray:#9CA3AF;
+
+    --radius:18px;
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+    --transition:.35s ease;
+
+    --font-title:'Playfair Display',serif;
+    --font-text:'Inter',sans-serif;
+
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:var(--font-text);
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   HERO PRINCIPAL
+========================================================== */
+
+.hero-home{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background-image:url("../assets/fondoo.jpg");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Capa oscura */
+
+.hero-home::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.55)
+    );
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hero-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+/* =========================
+   TITULO
+========================= */
+
+.hero-content h1{
+
+    font-family:var(--font-title);
+
+    font-size:clamp(2.7rem,6vw,5rem);
+
+    color:white;
+
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+
+    text-shadow:0 5px 20px rgba(0,0,0,.55);
+
+}
+
+/* =========================
+   PÁRRAFO
+========================= */
+
+.hero-content p{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#F5F5F5;
+
+}
+
+/* =========================
+   BOTÓN HERO
+========================= */
+
+.btn-scroll{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:40px;
+
+    padding:18px 48px;
+
+    border:2px solid var(--gold);
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:var(--transition);
+
+    backdrop-filter:blur(5px);
+
+}
+
+.btn-scroll:hover{
+
+    background:var(--gold);
+
+    color:#000;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+/* ==========================================================
+   PRESENTACIÓN
+========================================================== */
+
+.valores-section{
+
+    padding:90px 20px;
+
+    text-align:center;
+
+}
+
+.valores-section h2{
+
+    font-family:var(--font-title);
+
+    font-size:2.3rem;
+
+    color:white;
+
+    letter-spacing:2px;
+
+}
+
+.divider{
+
+    width:90px;
+
+    height:4px;
+
+    background:var(--gold);
+
+    margin:25px auto;
+
+    border-radius:20px;
+
+}
+
+.valores-section p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:var(--gray);
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   FIN PARTE 1
+========================================================== */
+/* ==========================================================
+   HOTELES DE LA MIXTECA
+   MAIN.CSS - PARTE 2/4
+   Destinos + Tarjetas + Ciudad + Historia
+==========================================================*/
+
+
+/*==========================================================
+    GRID DESTINOS
+==========================================================*/
+
+.grid-destinos{
+
+    width:min(1250px,92%);
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+/*==========================================================
+    TARJETAS DESTINOS
+==========================================================*/
+
+.card-destino{
+
+    position:relative;
+
+    height:260px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:.45s;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.card-destino::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.65)
+    );
+
+    transition:.4s;
+
+}
+
+
+.card-destino:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.card-destino:hover::before{
+
+    background:linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+
+.card-destino span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    font-size:2rem;
+
+    font-family:var(--font-title);
+
+    letter-spacing:4px;
+
+    text-shadow:0 5px 15px black;
+
+}
+
+
+/*==========================================================
+    IMÁGENES DESTINOS
+==========================================================*/
+
+.card-huajuapan{
+
+    background-image:url("../assets/hua1.jpg");
+
+}
+
+.card-tlaxiaco{
+
+    background-image:url("../assets/tlax1.jpg");
+
+}
+
+.card-nochixtlan{
+
+    background-image:url("../assets/noch1.jpg");
+
+}
+
+
+/*==========================================================
+    BOTÓN VOLVER
+==========================================================*/
+
+.btn-volver{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:30px;
+
+    color:var(--gold);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.btn-volver:hover{
+
+    transform:translateX(-5px);
+
+}
+
+
+/*==========================================================
+    HEADER CIUDAD
+==========================================================*/
+
+.destino-header-container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    margin-top:25px;
+
+    margin-bottom:60px;
+
+    min-height:320px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background-position:center;
+
+    background-size:cover;
+
+    position:relative;
+
+}
+
+
+.destino-header-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.58);
+
+}
+
+
+.destino-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:40px;
+
+}
+
+
+#titulo-ciudad{
+
+    font-size:clamp(2.2rem,5vw,4rem);
+
+    color:white;
+
+    font-family:var(--font-title);
+
+    letter-spacing:4px;
+
+}
+
+
+.subtitulo-destino{
+
+    margin-top:20px;
+
+    color:#E5E7EB;
+
+    font-size:1.15rem;
+
+}
+
+
+/*==========================================================
+    LÍNEA DORADA
+==========================================================*/
+
+.header-linea{
+
+    width:90px;
+
+    height:4px;
+
+    margin:20px auto;
+
+    background:var(--gold);
+
+    border-radius:50px;
+
+}
+
+
+/*==========================================================
+    HISTORIA
+==========================================================*/
+
+.historia-section{
+
+    width:min(900px,92%);
+
+    margin:auto;
+
+    margin-bottom:60px;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.historia-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+
+.historia-header h2{
+
+    font-family:var(--font-title);
+
+    color:var(--gold);
+
+    font-size:1.8rem;
+
+}
+
+
+#icono-toggle{
+
+    font-size:2rem;
+
+    color:var(--gold);
+
+}
+
+
+.historia-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s;
+
+}
+
+
+.historia-content.abierto{
+
+    max-height:400px;
+
+}
+
+
+.historia-content p{
+
+    margin-top:20px;
+
+    line-height:1.9;
+
+    color:#D1D5DB;
+
+}
+
+
+/*==========================================================
+    FILTROS
+==========================================================*/
+
+.nav-filtros{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:50px;
+
+}
+
+
+.btn-filtro{
+
+    border:none;
+
+    background:var(--card);
+
+    color:white;
+
+    padding:14px 26px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+
+.btn-filtro:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+}
+
+
+/*==========================================================
+    TARJETAS HOTELES
+==========================================================*/
+
+#contenedor-hoteles{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+    margin-bottom:70px;
+
+}
+
+
+.hotel-card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.hotel-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.hotel-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+
+.hotel-info{
+
+    padding:25px;
+
+}
+
+
+.hotel-info h3{
+
+    font-family:var(--font-title);
+
+    color:var(--gold);
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+}
+
+
+.hotel-info p{
+
+    color:#D1D5DB;
+
+    line-height:1.7;
+
+}
+
+
+.btn-detalles{
+
+    margin-top:25px;
+
+    background:var(--gold);
+
+    color:black;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.btn-detalles:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==========================================================
+    FIN PARTE 2
+==========================================================*/
+/* ==========================================================
+   HOTELES DE LA MIXTECA
+   MAIN.CSS - PARTE 3/4
+   Página de Detalle del Hotel
+========================================================== */
+
+/* =========================
+   BOTÓN FLOTANTE
+========================= */
+
+.btn-volver-flotante{
+
+    position:fixed;
+
+    top:20px;
+
+    left:20px;
+
+    z-index:999;
+
+    border:none;
+
+    background:rgba(17,24,39,.90);
+
+    color:white;
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+}
+
+.btn-volver-flotante:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+}
+
+/* =========================
+   HERO DEL HOTEL
+========================= */
+
+.hotel-hero{
+
+    width:100%;
+
+    height:60vh;
+
+    min-height:320px;
+
+    max-height:650px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.hotel-hero img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hotel-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.55)
+    );
+
+}
+
+/* =========================
+   INFORMACIÓN PRINCIPAL
+========================= */
+
+.detalle-header-info{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+.detalle-header-info h1{
+
+    font-family:var(--font-title);
+
+    font-size:clamp(2.2rem,5vw,4rem);
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+.rating-box{
+
+    color:#FFD700;
+
+    font-size:1.6rem;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+   PRECIO Y UBICACIÓN
+========================= */
+
+.info-rapida{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+.precio,
+.ubicacion{
+
+    background:var(--card);
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    box-shadow:var(--shadow);
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.hotel-contenido{
+
+    width:min(1200px,92%);
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+}
+
+/* =========================
+   COLUMNAS
+========================= */
+
+.col-info,
+.col-servicios{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.col-info h2,
+.col-servicios h2{
+
+    font-family:var(--font-title);
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.col-info p{
+
+    line-height:1.9;
+
+    color:#D1D5DB;
+
+}
+
+.info-adicional{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.info-adicional h3{
+
+    color:var(--gold);
+
+    margin-bottom:12px;
+
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.grid-servicios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+
+    gap:15px;
+
+}
+
+.servicio-item{
+
+    background:#2D3748;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:14px;
+
+    padding:18px 12px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.servicio-item:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+    transform:translateY(-4px);
+
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto-card{
+
+    width:min(800px,92%);
+
+    margin:70px auto;
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contacto-card h2{
+
+    font-family:var(--font-title);
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.contacto-card p{
+
+    color:#D1D5DB;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   BOTÓN WHATSAPP
+========================= */
+
+.btn-whatsapp{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:30px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-whatsapp:hover{
+
+    transform:translateY(-4px);
+
+    background:#1EBE5D;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:80px;
+
+    padding:45px 20px;
+
+    background:#0F172A;
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+    border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+.footer p:first-child{
+
+    color:white;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================================
+   FIN PARTE 3
+========================================================== */
+/* ==========================================================
+   HOTELES DE LA MIXTECA
+   MAIN.CSS - PARTE 4/4
+   Responsive + Animaciones + Utilidades
+==========================================================*/
+
+
+/*=========================
+    ANIMACIONES
+=========================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content,
+.valores-section,
+.card-destino,
+.hotel-card,
+.historia-section,
+.contacto-card,
+.col-info,
+.col-servicios{
+
+    animation:aparecer .8s ease;
+
+}
+
+
+/*=========================
+    SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold2);
+
+}
+
+
+/*=========================
+    SELECCIÓN DE TEXTO
+=========================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:black;
+
+}
+
+
+/*=========================
+    FOCUS
+=========================*/
+
+button:focus,
+a:focus{
+
+    outline:none;
+
+}
+
+
+/*=========================
+    EFECTOS GENERALES
+=========================*/
+
+.hotel-card,
+.card-destino,
+.btn-scroll,
+.btn-filtro,
+.btn-whatsapp,
+.btn-detalles,
+.servicio-item{
+
+    transition:all .35s ease;
+
+}
+
+
+/*=========================
+    RESPONSIVE
+=========================*/
+
+@media(max-width:1100px){
+
+    .hotel-contenido{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .hero-content h1{
+
+        letter-spacing:2px;
+
+    }
+
+    .grid-destinos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #contenedor-hoteles{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .hero-home{
+
+        min-height:85vh;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:1rem;
+
+    }
+
+    .btn-scroll{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+    .destino-header-container{
+
+        min-height:230px;
+
+    }
+
+    #titulo-ciudad{
+
+        font-size:2rem;
+
+    }
+
+    .historia-header h2{
+
+        font-size:1.4rem;
+
+    }
+
+    .detalle-header-info h1{
+
+        font-size:2rem;
+
+    }
+
+    .contacto-card{
+
+        padding:30px;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .hotel-hero{
+
+        height:280px;
+
+    }
+
+    .info-rapida{
+
+        flex-direction:column;
+
+    }
+
+    .grid-servicios{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .btn-volver-flotante{
+
+        top:15px;
+
+        left:15px;
+
+        padding:10px 18px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .hero-content{
+
+        padding:0 10px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2rem;
+
+    }
+
+    .valores-section h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .card-destino{
+
+        height:220px;
+
+    }
+
+    .hotel-card img{
+
+        height:210px;
+
+    }
+
+    .btn-filtro{
+
+        width:100%;
+
+    }
+
+    .btn-whatsapp{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*=========================
+    UTILIDADES
+=========================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+
+/*=========================
+    FIN
+=========================*/

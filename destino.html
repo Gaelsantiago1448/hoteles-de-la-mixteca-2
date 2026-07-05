@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hoteles de la Mixteca</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- BOTÓN VOLVER -->
+    <!-- ========================= -->
+
+    <a href="index.html" class="btn-volver">
+        ← Volver al inicio
+    </a>
+
+    <!-- ========================= -->
+    <!-- PORTADA DE LA CIUDAD -->
+    <!-- ========================= -->
+
+    <header class="destino-header-container">
+
+        <div class="destino-overlay">
+
+            <h1 id="titulo-ciudad">
+                Cargando...
+            </h1>
+
+            <div class="header-linea"></div>
+
+            <p class="subtitulo-destino">
+                Descubre los mejores hoteles disponibles en este destino.
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- HISTORIA -->
+    <!-- ========================= -->
+
+    <section class="historia-section">
+
+        <div class="historia-header"
+            onclick="toggleHistoria()">
+
+            <h2>Historia y Cultura</h2>
+
+            <span id="icono-toggle">
+                +
+            </span>
+
+        </div>
+
+        <div id="historia-contenido"
+            class="historia-content">
+
+            <p id="texto-historia">
+                Cargando información...
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FILTROS -->
+    <!-- ========================= -->
+
+    <section class="nav-filtros">
+
+        <button class="btn-filtro"
+            onclick="filtrarHoteles('todos')">
+
+            Todos
+
+        </button>
+
+        <button class="btn-filtro"
+            onclick="filtrarHoteles('wifi')">
+
+            WiFi
+
+        </button>
+
+        <button class="btn-filtro"
+            onclick="filtrarHoteles('estacionamiento')">
+
+            Estacionamiento
+
+        </button>
+
+        <button class="btn-filtro"
+            onclick="filtrarHoteles('restaurante')">
+
+            Restaurante
+
+        </button>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- LISTA DE HOTELES -->
+    <!-- ========================= -->
+
+    <main id="contenedor-hoteles">
+
+        <!-- JavaScript genera las tarjetas -->
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            ¿No encontraste lo que buscabas?
+
+        </p>
+
+        <p>
+
+            Muy pronto agregaremos más hoteles y destinos
+            de toda la región Mixteca.
+
+        </p>
+
+    </footer>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
